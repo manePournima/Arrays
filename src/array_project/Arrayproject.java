@@ -1,56 +1,33 @@
 package array_project;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Arrayproject {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-		int a[][]= new int[3][3];
-		
-		int num=0;
-		
-		
-		
-		for (int i=0;i<3;i++) {
-			
-			for (int j=0;j<3;j++) {
-				
-				a[i][j]= num;
-				++num;
-				
+
+		String str = "Mrinal Mishra";
+
+		Map<Character, Integer> hm = new HashMap<>();
+
+		for (char c : str.toCharArray()) {
+			if (hm.containsKey(c)) {
+				hm.put(c, hm.get(c) + 1);
+			} else {
+				hm.put(c, 1);
 			}
-			
 		}
-		
-			for (int i=0;i<3;i++) {
-				
-				for(int j=0;j<3;j++) {
-					
-				
-				System.out.println (a[i][j] +  " " );
-				
+
+		for (Map.Entry<Character, Integer> e : hm.entrySet()) {
+
+			if (e.getValue() == 2) {
+				System.out.println(e);
 			}
-			
-			}
-			
-			
-			System.out.println();
-			}
+
+		}
+
+	}
+
 }
-		    
-	    
-	
-	
-	
-
-				
-				
-				
-				
-				
-				
-				
-
-
-
-
